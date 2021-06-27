@@ -24,5 +24,5 @@ The program allows the customization of several parameters through a configurati
 19)	Window parameter (Define the maximum allowed distance from the diagonal for the DTW computation Sakoe-Chiba (1978)).
 
 An example of configuration file can be found in the repository.
-The Fortran 90 file (DTW_SOM f90 file) can be compiled with Gfortran compiler and run from the Command Prompt tying the application name followed by the configuration file name (e.g. DTW_SOM configuration_file_example.cfg).
+The Fortran 90 file (DTW_SOM .f90 file) can be compiled with Gfortran compiler and run from the Command Prompt tying the application name followed by the configuration file name (e.g. DTW_SOM configuration_file_example.cfg).
 The configuration file can be useful to set up several batch procedure to perform a large number of tests.
