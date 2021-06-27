@@ -3,7 +3,8 @@ Dynamic Time Warping Self-Organizing Map algorithm
 
 The software implements a Self-Organizing Map (SOM) algorithm that uses a Dynamic Time Warping distance measure (DTW). The program is written in Fortran 90 and has been used to cluster time series of the same length. The aim of the clustering was to reduce the complexity of a satellite chlorophyll a time series dataset which comprised over 37000 series. The dataset complexity reduction allowed the spatio-temporal analysis of the chlorophyll a dynamics in the Mediterranean Sea.
 
-The program allows the customization of several parameters through a configuration file (.cfg). The configuration file let the user define:
+The program allows the customization of several parameters through a configuration file (.cfg). 
+The configuration file let the user define:
 1)	Input file name (a .txt comma separated file in which the data are stored)
 2)	Best Matching Unit (BMU) output file name (Contains the BMU for each data object)
 3)	Final codebooks file name (Contains the final codebooks)
