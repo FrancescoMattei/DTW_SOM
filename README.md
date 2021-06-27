@@ -26,6 +26,8 @@ The configuration file let the user define:
 18)	Learning rate maximum value
 19)	Window parameter (Define the maximum allowed distance from the diagonal for the DTW computation Sakoe-Chiba (1978)).
 
-An example of configuration file can be found in the repository (configuration_file_example.cfg).
+The training data should be stored in .txt file in which each row contains a data object. The objects variables should be comma delimited.
+An example of input and configuration file can be found in the repository (input_file_example.txt and configuration_file_example.cfg).
+
 The Fortran 90 file (DTW_SOM .f90 file) can be compiled with the Gfortran compiler and run from the Command Prompt tying the application name followed by the configuration file name (e.g. DTW_SOM configuration_file_example.cfg).
 The configuration file can be useful to set up several batch procedure to perform a large number of tests.
