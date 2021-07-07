@@ -9,10 +9,9 @@ program SOM_DTW_window
     real*4, ALLOCATABLE, DIMENSION (:,:,:) :: som
     real*4, ALLOCATABLE, DIMENSION (:,:) :: dat,mat
     real*4, ALLOCATABLE, DIMENSION (:) :: a,b
-    integer*4, ALLOCATABLE, DIMENSION (:) :: idx_n,mtchx,mtchy
-    integer*4, dimension(37270) :: tmp_idx_vec = 0 !dimension(number of objects)
-
-
+    integer*4, ALLOCATABLE, DIMENSION (:) :: idx_n,mtchx,mtchy,tmp_idx_vec
+    
+    
     CALL get_command_argument(1, cfg_name)
     cfg_name = trim(cfg_name)
     print*, cfg_name
@@ -44,7 +43,7 @@ program SOM_DTW_window
 
     w = max(win, abs(m-m))
     allocate(mat(m+1,m+1))
-
+    
     !initialize the distance matrix
     do i = 1, (m+1)
         do j = 1, (m+1)
@@ -72,7 +71,7 @@ program SOM_DTW_window
     nepochs = nepochs1 + nepochs2
     tmax = nepochs1
     amin2 = 0.01
-    allocate(mtchx(n), mtchy(n))
+    allocate(mtchx(n), mtchy(n), tmp_idx_vec(n))
 
     !weights initialized with random data objects
     allocate(som(ny,nx,m))
