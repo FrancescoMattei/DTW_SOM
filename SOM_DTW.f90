@@ -10,7 +10,7 @@ program SOM_DTW_window
     real*4, ALLOCATABLE, DIMENSION (:,:) :: dat,mat
     real*4, ALLOCATABLE, DIMENSION (:) :: a,b
     integer*4, ALLOCATABLE, DIMENSION (:) :: idx_n,mtchx,mtchy
-    integer*4, dimension(37270) :: tmp_idx_vec = 0
+    integer*4, dimension(37270) :: tmp_idx_vec = 0 !dimension(number of objects)
 
 
     CALL get_command_argument(1, cfg_name)
