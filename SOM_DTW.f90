@@ -89,10 +89,13 @@ program SOM_DTW_window
     do ne=1,nepochs
         stress = 0
         counter = 1
-        tmp_idx_vec(37270) = 0
-        10 do while(tmp_idx_vec(37270)==0)
+	do i = 1,n
+       	    tmp_idx_vec(i)=0
+        end do
+	
+        10 do while(tmp_idx_vec(n)==0)
             call RANDOM_NUMBER(rnd)
-            tmp_idx = int(37270 * rnd) + 1
+            tmp_idx = int(n * rnd) + 1
             do i = 1, counter
                 if (tmp_idx_vec(i)==tmp_idx) then
                     go to 10
