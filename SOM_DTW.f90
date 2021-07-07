@@ -160,7 +160,7 @@ program SOM_DTW_window
                 alpha = amin2
             end if
 
-			!check if the row is even
+	    !check if the row is even
             if((ihit / 2 == int(ihit / 2))) then
                 h2 = 0
             else
@@ -170,7 +170,7 @@ program SOM_DTW_window
 				!check if the row exists
                 if(rr >= 1.AND.rr <= ny)then
                     kk = ir - int(abs(ihit - rr) / 2)
-					!check if row distance from BMU row is even
+		    !check if row distance from BMU row is even
                     if(rr / 2 == INT(rr / 2)) then
                         h1 = 0
                     else
@@ -179,7 +179,7 @@ program SOM_DTW_window
                     c0 = jhit - kk + h1 * (1 - h2)
                     c1 = jhit + kk - (1 - h1) * h2
                     do cc = c0,c1
-						!check if the column exists
+			!check if the column exists
                         if(cc >= 1.AND.cc <= nx) then
                             if(neightype == 1)then
                                 hd = abs(int(ihit) - int(rr))
